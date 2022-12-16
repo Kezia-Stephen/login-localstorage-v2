@@ -1,13 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;1,200;1,400;1,600;1,700&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Raleway', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.form__container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #0095ff 0%, #92dffe 100%);
+}
+.form__container form {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  padding: 20px;
+}
+.form__heading {
+  text-align: center;
+  font-weight: bolder;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 10px;
+}
+.form__button {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+.form__button:hover {
+  background-color: rgba(0, 0, 0, 0.795);
+}
+.form__submit-btn {
+  margin-top: 20px;
+  width: 100%;
+  color: white;
+  background-color: black;
+  padding: 10px 0px;
+}
+.form__submit-btn:hover {
+  opacity: 0.9;
+}
+.content {
+  min-height: 73vh !important;
 }

@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import LoginPage from "./Pages/LoginPage";
+import UsersList from "./Pages/UsersList";
+import HomePage from "./Pages/HomePage";
+import DashBoard from "./Pages/DashBoard";
+import Details from "./Pages/Details";
+import Footer from "./Components/Footer";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/profile" element={<HomePage />} />
+        <Route path="/homepage" element={<DashBoard />} />
+        <Route path="/users" element={<UsersList />} />
+        <Route path="/details/:id" element={<Details />}/>
+        {/* <Route path="/details/:type" element={<Details />}/> */}
+      </Routes>
+      {/* <Footer /> */}
+    </>
   );
 }
 
